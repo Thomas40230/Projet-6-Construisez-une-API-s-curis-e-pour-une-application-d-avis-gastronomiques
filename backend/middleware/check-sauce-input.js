@@ -1,4 +1,4 @@
-let textRegExp = /[\^=<>{}]+/gmi;
+let textRegExp = /[\^=<>{}]+/mi;
 
 module.exports = (req, res, next) => {
     // Si il s'agit de la route post
