@@ -85,7 +85,7 @@ exports.deleteSauce = (req, res, next) => {
       });
 };
 
-// Méthode find() pour renvoyer un tableau contenant toute les sauces de la base de donnée.
+// Méthode find() pour renvoyer toutes les sauces de la base de donnée.
 exports.getAllSauces = (req, res, next) => {
   Sauce.find().then(
     (sauces) => {
