@@ -1,4 +1,4 @@
-const multer = require('multer');
+const multer = require('multer'); // On importe le package multer de node.
 
 const MIME_TYPES = {
   'image/jpg': 'jpg',
@@ -11,9 +11,9 @@ const storage = multer.diskStorage({
     callback(null, 'images');
   },
   filename: (req, file, callback) => {
-    const name = file.originalname.split(' ').join('_');
+    const name = file.originalname.split(' ').join('_'); //split explose le nom en remplacant les expaces par des underscores
     const extension = MIME_TYPES[file.mimetype];
-    callback(null, name + Date.now() + '.' + extension);
+    callback(null, name + Date.now() + '.' + extension); //on ajoute au nom "date.now" pour que chaque fichier est un nom different
   }
 });
 
